@@ -42,7 +42,7 @@ A comprehensive full-stack library management system built with NestJS, Prisma, 
 ### Authors Management
 ![Authors Management](Images/author.png)
 
-## 📋 Prerequisites
+##  Prerequisites
 
 - Node.js 20+ and npm
 - PostgreSQL 15+ (or use Docker)
@@ -157,7 +157,7 @@ A comprehensive full-stack library management system built with NestJS, Prisma, 
 
    The frontend will be available at http://localhost:3001
 
-## 🔐 Authentication
+##  Authentication
 
 ### Getting a Token
 
@@ -182,7 +182,7 @@ curl -X GET http://localhost:3000/books \
   -H "Authorization: Bearer YOUR_TOKEN_HERE"
 ```
 
-## 📚 API Endpoints
+##  API Endpoints
 
 ### Authentication
 - `POST /auth/login` - Login and get JWT token
@@ -214,7 +214,7 @@ curl -X GET http://localhost:3000/books \
 
 Full API documentation is available at http://localhost:3000/api (Swagger UI)
 
-## 🗄️ Database Schema
+##  Database Schema
 
 ### Models
 
@@ -230,7 +230,7 @@ Full API documentation is available at http://localhost:3000/api (Swagger UI)
 - Book has many BorrowedBooks (one-to-many)
 - Book belongs to Author (many-to-one)
 
-## 📝 Design Decisions & Assumptions
+##  Design Decisions & Assumptions
 
 1. **Authentication**: Only login endpoint is public. All other endpoints require JWT authentication.
 
@@ -256,7 +256,7 @@ Full API documentation is available at http://localhost:3000/api (Swagger UI)
 
 7. **Error Handling**: Frontend displays user-friendly error messages, backend returns appropriate HTTP status codes.
 
-## 🧪 Running Tests
+##  Running Tests
 
 ### Backend Tests
 ```bash
@@ -291,7 +291,7 @@ docker-compose exec backend npm run prisma:migrate
 docker-compose exec backend npm run prisma:seed
 ```
 
-## 📦 Building for Production
+##  Building for Production
 
 ### Backend
 ```bash
@@ -319,29 +319,18 @@ npm run build
 ### Frontend (.env)
 - `VITE_API_URL` - Backend API URL (default: http://localhost:3000)
 
-## 📖 Default Seed Data
+##  Default Seed Data
 
 The seed script creates:
 - 3 authors: J.K. Rowling, George R.R. Martin, J.R.R. Tolkien
 - 3 books: Sample books by these authors
 - 
 
-## 🚨 Troubleshooting
+##  Troubleshooting
 
 1. **Database connection errors**: Ensure PostgreSQL is running and DATABASE_URL is correct
 2. **CORS errors**: Check FRONTEND_URL matches your frontend URL
 3. **Token expired**: Logout and login again
 4. **Port already in use**: Change PORT in .env file or stop the conflicting service
 
-## 📄 License
-
-MIT
-
-## 👤 Author
-
-Full-Stack Intern Assignment
-
----
-
-For any issues or questions, please refer to the Swagger documentation at `/api` endpoint or check the codebase.
 
